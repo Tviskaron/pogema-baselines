@@ -1,0 +1,23 @@
+name: pogema-8x8
+
+global_settings:
+  use_wandb: True
+experiment_settings:
+  save_every_sec: 120
+  encoder_custom: pogema_residual
+  train_for_env_steps: 100000000
+async_ppo:
+  experiment_summaries_interval: 10
+  ppo_epochs: 1
+  batch_size: 4096
+  use_rnn: True
+  max_grad_norm: 0.0
+  num_workers: 12
+  num_envs_per_worker: 4
+environment:
+  name:
+    grid_search:
+      - "Pogema-8x8-easy-v0"
+      - "Pogema-8x8-normal-v0"
+      - "Pogema-8x8-hard-v0"
+      - "Pogema-8x8-extra-hard-v0"

@@ -4,4 +4,4 @@ ADD requirements.txt /tmp/
 RUN pip install -r /tmp/requirements.txt
 
 ARG CACHEBUST=1
-RUN pip install pogema && pip freeze | grep pogema
+RUN pip install -U pogema && pip freeze | grep pogema

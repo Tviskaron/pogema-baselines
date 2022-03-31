@@ -12,7 +12,7 @@ async_ppo:
   batch_size: 4096
   use_rnn: True
   max_grad_norm: 0.0
-  num_workers: 12
+  num_workers: 8
   num_envs_per_worker: 2
 environment:
   name:

@@ -1,0 +1,23 @@
+name: pogema-32x32
+
+global_settings:
+  use_wandb: True
+experiment_settings:
+  save_every_sec: 120
+  encoder_custom: pogema_residual
+  train_for_env_steps: 100000000
+async_ppo:
+  experiment_summaries_interval: 10
+  ppo_epochs: 1
+  batch_size: 4096
+  use_rnn: True
+  max_grad_norm: 0.0
+  num_workers: 4
+  num_envs_per_worker: 2
+environment:
+  name:
+    grid_search:
+      - "Pogema-32x32-extra-hard-v0"
+      - "Pogema-32x32-hard-v0"
+      - "Pogema-32x32-normal-v0"
+      - "Pogema-32x32-easy-v0"

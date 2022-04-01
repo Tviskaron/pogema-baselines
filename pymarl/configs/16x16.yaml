@@ -8,7 +8,7 @@ logging:
 env_args:
   name:
     grid_search:
-      - "Pogema-8x8-extra-hard-v0"
-      - "Pogema-8x8-hard-v0"
-      - "Pogema-8x8-normal-v0"
-      - "Pogema-8x8-easy-v0"
+      - "Pogema-16x16-extra-hard-v0"
+      - "Pogema-16x16-hard-v0"
+      - "Pogema-16x16-normal-v0"
+      - "Pogema-16x16-easy-v0"

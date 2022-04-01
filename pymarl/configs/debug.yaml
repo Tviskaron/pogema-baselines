@@ -1,0 +1,10 @@
+algo: QMIX
+#  grid_search: [ QMIX, VDN, IQL, QTRAN,]
+settings:
+  t_max: 10000
+logging:
+  use_wandb: False
+  project_name: "Pogema-16x16"
+env_args:
+  name: "Pogema-16x16-easy-v0"
+  integration: "PyMARL"

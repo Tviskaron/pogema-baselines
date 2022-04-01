@@ -1,0 +1,10 @@
+algo: QMIX
+#  grid_search: [ QMIX, VDN, IQL, QTRAN,]
+settings:
+  t_max: 2000000
+logging:
+  use_wandb: False
+  project_name: "Pogema-8x8"
+env_args:
+  name: "Pogema-8x8-easy-v0"
+#    grid_search: ["Pogema-8x8-easy-v0", "Pogema-8x8-normal-v0", "Pogema-8x8-hard-v0", "Pogema-8x8-extra-hard-v0"]

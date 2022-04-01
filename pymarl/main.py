@@ -7,7 +7,7 @@ import time
 
 import yaml
 
-from pymarl.utils.config_validation import ExperimentConfig
+from utils.config_validation import ExperimentConfig
 
 from utils.gs2dict import generate_variants
 

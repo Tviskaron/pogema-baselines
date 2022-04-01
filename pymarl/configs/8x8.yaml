@@ -3,7 +3,7 @@ algo: QMIX
 settings:
   t_max: 2000000
 logging:
-  use_wandb: False
+  use_wandb: True
   project_name: "Pogema-8x8"
 env_args:
   name: "Pogema-8x8-easy-v0"

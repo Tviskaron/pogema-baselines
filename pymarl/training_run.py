@@ -13,7 +13,7 @@ from sacred import Experiment
 from sacred.observers import FileStorageObserver
 from sacred.utils import apply_backspaces_and_linefeeds
 
-from pymarl.utils.config_validation import ExperimentConfig
+from utils.config_validation import ExperimentConfig
 from training import run
 from utils.logging import get_logger
 

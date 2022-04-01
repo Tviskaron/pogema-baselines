@@ -1,0 +1,23 @@
+name: pogema-64x64
+
+global_settings:
+  use_wandb: True
+experiment_settings:
+  save_every_sec: 120
+  encoder_custom: pogema_residual
+  train_for_env_steps: 1000000000
+async_ppo:
+  experiment_summaries_interval: 10
+  ppo_epochs: 1
+  batch_size: 4096
+  use_rnn: True
+  max_grad_norm: 0.0
+  num_workers: 1
+  num_envs_per_worker: 2
+environment:
+  name:
+    grid_search:
+      - "Pogema-64x64-extra-hard-v0"
+      - "Pogema-64x64-hard-v0"
+      - "Pogema-64x64-normal-v0"
+      - "Pogema-64x64-easy-v0"

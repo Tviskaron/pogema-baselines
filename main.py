@@ -48,7 +48,7 @@ def start_training_runs(config_path):
 
 def main():
     parser = argparse.ArgumentParser(description='Process training config.')
-    parser.add_argument('--config_path', type=str, action="store", default='training_configs/32x32.yaml',
+    parser.add_argument('--config_path', type=str, action="store", default='training_configs/64x64.yaml',
                         help='path to yaml file with single run configuration', required=False)
     params = parser.parse_args()
     start_training_runs(params.config_path)

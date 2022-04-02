@@ -4,7 +4,7 @@ settings:
   t_max: 2000000
 logging:
   use_wandb: True
-  project_name: "Pogema-8x8"
+  project_name: "Pogema-16x16"
 env_args:
   name:
     grid_search:

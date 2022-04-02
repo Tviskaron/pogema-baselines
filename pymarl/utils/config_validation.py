@@ -114,7 +114,7 @@ class AgentPrams(BaseModel):
 
 
 class Environment(BaseModel):
-    name: str = '123'
+    name: str = 'Pogema-v0'
     grid_config: GridConfig = None
     integration: str = "PyMARL"
 

@@ -20,8 +20,9 @@ from utils.config_validation import Experiment, Environment
 
 
 def make_pogema(env_cfg: Environment = Environment()):
+    from pogema.integrations.make_pogema import make_pogema
     if env_cfg.name == 'Pogema-v0':
-        env = gym.make(env_cfg.name, config=env_cfg.grid_config, integration='SampleFactory')
+        env = make_pogema(grid_config=env_cfg.grid_config, integration='SampleFactory')
     else:
         env = gym.make(env_cfg.name, integration='SampleFactory')
     return env

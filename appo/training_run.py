@@ -61,11 +61,12 @@ def pogema_extra_episodic_stats_processing(policy_id, stat_key, stat_value, cfg)
 
 def pogema_extra_summaries(policy_id, policy_avg_stats, env_steps, summary_writer, cfg):
     for key in policy_avg_stats:
-        for metric in ['ISR', 'CSR']:
-            if metric in key:
-                avg = np.mean(policy_avg_stats[key])
-                summary_writer.add_scalar(key, avg, env_steps)
-                log.debug(f'{key}: {round(float(avg), 3)}')
+        if key in ['reward', 'len', 'true_reward', 'Done']:
+            continue
+
+        avg = np.mean(np.array(policy_avg_stats[key][policy_id]))
+        summary_writer.add_scalar(key, avg, env_steps)
+        log.debug(f'{policy_id}-{key}: {round(float(avg), 3)}')
 
 
 def validate_config(config):

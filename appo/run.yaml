@@ -1,0 +1,17 @@
+container:
+  image: "pogema-sf:latest"
+  command: 'python main.py --config_path="configs/debug.yaml"'
+
+  tty: True
+  environment:
+    - "WANDB_API_KEY=<KEY>"
+    - "OMP_NUM_THREADS=1"
+    - "MKL_NUM_THREADS=1"
+    - "NVIDIA_VISIBLE_DEVICES=0"
+code:
+  folder: "."
+  ignore: [".git"]
+
+host_config:
+  runtime: nvidia
+  shm_size: '24096m'

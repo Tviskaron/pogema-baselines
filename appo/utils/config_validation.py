@@ -1,9 +1,14 @@
 import multiprocessing
+from typing import Union, Literal
 
 from pogema import GridConfig
 from pydantic import Extra, BaseModel, validator
 import os
 from os.path import join
+from pogema.grid_config import Easy8x8, Normal8x8, Hard8x8, ExtraHard8x8
+from pogema.grid_config import Easy16x16, Normal16x16, Hard16x16, ExtraHard16x16
+from pogema.grid_config import Easy32x32, Normal32x32, Hard32x32, ExtraHard32x32
+from pogema.grid_config import Easy64x64, Normal64x64, Hard64x64, ExtraHard64x64
 
 
 class AsyncPPO(BaseModel, extra=Extra.forbid):
@@ -127,9 +132,12 @@ class Evaluation(BaseModel, extra=Extra.forbid):
 
 
 class Environment(BaseModel, ):
-    grid_config: GridConfig = GridConfig()
-    name: str = 'Pogema-v0'
-    # framestack: int = 1
+    grid_config: Union[Easy8x8, Normal8x8, Hard8x8, ExtraHard8x8,
+                       Easy16x16, Normal16x16, Hard16x16, ExtraHard16x16,
+                       Easy32x32, Normal32x32, Hard32x32, ExtraHard32x32,
+                       Easy64x64, Normal64x64, Hard64x64, ExtraHard64x64, GridConfig] = GridConfig()
+    name: Literal['pogema_v0'] = 'pogema_v0'
+
     max_episode_steps: int = 256
     animation_monitor: bool = False
     animation_dir: str = './renders'

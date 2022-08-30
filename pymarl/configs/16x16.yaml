@@ -4,11 +4,8 @@ settings:
   t_max: 2000000
 logging:
   use_wandb: True
-  project_name: "Pogema-16x16"
+  project_name: "Pogema-16x16-PyMARL"
 env_args:
-  name:
-    grid_search:
-      - "Pogema-16x16-extra-hard-v0"
-      - "Pogema-16x16-hard-v0"
-      - "Pogema-16x16-normal-v0"
-      - "Pogema-16x16-easy-v0"
+  grid_config:
+    map_name: 
+      grid_search: [Easy16x16, Normal16x16, Hard16x16, ExtraHard16x16]

@@ -5,6 +5,7 @@ from pathlib import Path
 import gym
 import numpy as np
 import yaml
+from pogema import pogema_v0
 from sample_factory.algorithms.utils.algo_utils import EXTRA_EPISODIC_STATS_PROCESSING, EXTRA_PER_POLICY_SUMMARIES
 
 from sample_factory.utils.utils import log
@@ -21,11 +22,13 @@ from utils.config_validation import Experiment, Environment
 
 def make_pogema(env_cfg: Environment = Environment()):
     from pogema.integrations.make_pogema import make_pogema
-    if env_cfg.name == 'Pogema-v0':
-        env = make_pogema(grid_config=env_cfg.grid_config, integration='SampleFactory')
-    else:
-        env = gym.make(env_cfg.name, integration='SampleFactory')
-    return env
+    env_cfg.grid_config.integration = 'SampleFactory'
+    return pogema_v0(env_cfg.grid_config)
+    # if env_cfg.name == 'Pogema-v0':
+    #     env = make_pogema(grid_config=env_cfg.grid_config, integration='SampleFactory')
+    # else:
+    #     env = gym.make(env_cfg.name, integration='SampleFactory')
+    # return env
 
 
 def create_pogema_env(full_env_name, cfg=None, env_config=None):
@@ -44,9 +47,9 @@ def override_default_params_func(env, parser):
 
 def register_custom_components():
     global_env_registry().register_env(
-        env_name_prefix='Pogema',
+        env_name_prefix='pogema_v0',
         make_env_func=create_pogema_env,
-        override_default_params_func=override_default_params_func,
+        # override_default_params_func=override_default_params_func,
     )
 
     register_custom_encoder('pogema_residual', ResnetEncoder)

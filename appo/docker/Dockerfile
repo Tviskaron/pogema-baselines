@@ -4,4 +4,3 @@ ADD requirements.txt /tmp/
 RUN pip install -r /tmp/requirements.txt
 
 ARG CACHEBUST=1
-RUN pip install git+https://github.com/Tviskaron/pogema.git --force-reinstall && pip freeze | grep pogema 

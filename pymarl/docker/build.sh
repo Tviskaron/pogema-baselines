@@ -1,1 +1,1 @@
-docker build -t pogema-pymarl . --build-arg CACHEBUST=$(date +%s)
+docker build -t pogema-new-pymarl . --build-arg CACHEBUST=$(date +%s)

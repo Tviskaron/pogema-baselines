@@ -14,7 +14,7 @@ Pillow
 pluggy==0.7.1
 portpicker==1.2.0
 probscale==0.2.3
-protobuf==3.6.1
+protobuf==3.20.1
 py==1.6.0
 pygame
 pyparsing==2.2.2
@@ -39,6 +39,6 @@ websocket-client==0.53.0
 whichcraft==0.5.2
 wrapt==1.10.11
 wandb
-pogema>=1.0
+pogema==1.1.1
 sacred
 git+https://github.com/oxwhirl/smac.git

@@ -1,6 +1,6 @@
 container:
-  image: "pogema-sf:latest"
-  command: 'python main.py --config_path="configs/8x8.yaml"'
+  image: "pogema-new-pymarl:latest"
+  command: 'python main.py --config_path="configs/debug.yaml"'
 
   tty: True
   environment:
@@ -13,4 +13,4 @@ code:
   ignore: [".git"]
 host_config:
   runtime: nvidia
-  shm_size: '24096m'
+  shm_size: '4096m'

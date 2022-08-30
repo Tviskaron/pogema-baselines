@@ -4,11 +4,8 @@ settings:
   t_max: 2000000
 logging:
   use_wandb: True
-  project_name: "Pogema-8x8"
+  project_name: "Pogema-8x8-PyMARL"
 env_args:
-  name:
-    grid_search:
-      - "Pogema-8x8-extra-hard-v0"
-      - "Pogema-8x8-hard-v0"
-      - "Pogema-8x8-normal-v0"
-      - "Pogema-8x8-easy-v0"
+  grid_config:
+    map_name:
+      grid_search: [Easy8x8, Normal8x8, Hard8x8, ExtraHard8x8]

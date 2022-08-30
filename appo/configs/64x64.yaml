@@ -1,4 +1,4 @@
-name: pogema-64x64
+name: pogema-appo-64x64
 
 global_settings:
   use_wandb: True
@@ -14,10 +14,8 @@ async_ppo:
   max_grad_norm: 0.0
   num_workers: 1
   num_envs_per_worker: 2
+  ppo_clip_ratio: 0.03
 environment:
-  name:
-    grid_search:
-      - "Pogema-64x64-extra-hard-v0"
-      - "Pogema-64x64-hard-v0"
-      - "Pogema-64x64-normal-v0"
-      - "Pogema-64x64-easy-v0"
+  grid_config:
+    map_name:
+      grid_search: [Easy64x64, Normal64x64, Hard64x64, ExtraHard64x64 ]

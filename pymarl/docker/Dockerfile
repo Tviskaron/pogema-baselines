@@ -5,5 +5,4 @@ RUN pip install -r /tmp/requirements.txt
 
 
 RUN pip uninstall -y enum34 && pip install --ignore-installed six 
-RUN pip install --upgrade protobuf
-RUN pip install git+https://github.com/Tviskaron/pogema.git --force-reinstall && pip freeze | grep "pogema" 
+RUN pip install protobuf==3.20.1

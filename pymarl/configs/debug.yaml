@@ -1,7 +1,7 @@
 algo: QMIX
 #  grid_search: [ QMIX, VDN, IQL, QTRAN,]
 settings:
-  t_max: 20000
+  t_max: 10000
 logging:
   use_wandb: False
   project_name: "Pogema-PyMARL-Debug"

@@ -1,6 +1,6 @@
 # Pogema Baselines
 
-This repository contains a set of baselines for the Pogema environment.
+This repository contains a set of baselines for the [Pogema](https://github.com/AIRI-Institute/pogema) environment.
 
 ## Multi-Agent RL Baselines
 

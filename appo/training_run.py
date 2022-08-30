@@ -49,7 +49,7 @@ def register_custom_components():
     global_env_registry().register_env(
         env_name_prefix='pogema',
         make_env_func=create_pogema_env,
-        override_default_params_func=override_default_params_func,
+        # override_default_params_func=override_default_params_func,
     )
 
     register_custom_encoder('pogema_residual', ResnetEncoder)

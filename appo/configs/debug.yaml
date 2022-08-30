@@ -15,4 +15,4 @@ async_ppo:
   num_workers: 12
   num_envs_per_worker: 8
 environment:
-  name: Pogema-8x8-easy-v0
+  name: pogema-v0

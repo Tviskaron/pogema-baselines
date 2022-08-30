@@ -157,8 +157,8 @@ class Experiment(BaseModel):
 
     @validator('global_settings')
     def seed_initialization(cls, v, values):
-        # if v.env is None:
-        #     v.env = values['environment'].name
+        if v.env is None:
+            v.env = values['environment'].name
         if v.experiment is None:
             v.experiment = values['name']
         return v

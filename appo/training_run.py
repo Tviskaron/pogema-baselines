@@ -47,7 +47,7 @@ def override_default_params_func(env, parser):
 
 def register_custom_components():
     global_env_registry().register_env(
-        env_name_prefix='pogema',
+        env_name_prefix='pogema_v0',
         make_env_func=create_pogema_env,
         # override_default_params_func=override_default_params_func,
     )

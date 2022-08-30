@@ -1,4 +1,4 @@
-name: pogema-debug
+name: pogema-appo-debug
 
 global_settings:
   use_wandb: False
@@ -16,3 +16,6 @@ async_ppo:
   num_envs_per_worker: 8
 environment:
   name: pogema-v0
+  grid_config:
+    size: 16
+    num_agents: 8

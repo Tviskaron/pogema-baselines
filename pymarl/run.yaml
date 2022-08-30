@@ -1,7 +1,6 @@
 container:
   image: "pogema-new-pymarl:latest"
-#  command: 'python eval.py --config_path="configs/eval-life-long-warehouse.yaml"'
-  command: 'python main.py'
+  command: 'python main.py --config_path="configs/debug.yaml"'
 
   tty: True
   environment:

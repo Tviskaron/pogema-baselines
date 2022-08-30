@@ -1,6 +1,6 @@
 container:
   image: "pogema-sf:latest"
-  command: 'python main.py --config_path="configs/debug.yaml"'
+  command: 'python main.py --config_path="configs/8x8.yaml"'
 
   tty: True
   environment:

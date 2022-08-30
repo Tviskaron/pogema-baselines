@@ -39,6 +39,6 @@ websocket-client==0.53.0
 whichcraft==0.5.2
 wrapt==1.10.11
 wandb
-pogema>=1.0
+pogema==1.1.1
 sacred
 git+https://github.com/oxwhirl/smac.git

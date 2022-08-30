@@ -1,14 +1,13 @@
-algo:
-  grid_search: [ FACMAC, MADDPG ]
+algo: FACMAC
+#  grid_search: [ FACMAC, MADDPG ]
 settings:
-  t_max: 10000
+  t_max: 20000
 logging:
   use_wandb: False
-  project_name: "Pogema-8x8"
+  project_name: "Pogema-PyMARL-Debug"
 env_args:
-  name:
-    grid_search:
-      - "Pogema-8x8-extra-hard-v0"
-      - "Pogema-8x8-hard-v0"
-      - "Pogema-8x8-normal-v0"
-      - "Pogema-8x8-easy-v0"
+  grid_config:
+    size: 8
+    num_agents: 8
+    density: 0.3
+    map_name: 'custom'

@@ -30,8 +30,7 @@ def main():
 
     for resolved_vars, spec in generate_variants(config):
         exp = ExperimentConfig(**spec)
-        # print(exp)
-        # continue
+
         cmd = f"python3 training_run.py --raw_config '{json.dumps(exp.dict())}'"
         env_vars = os.environ.copy()
         process = subprocess.Popen(cmd, stdout=subprocess.PIPE, shell=True, env=env_vars)

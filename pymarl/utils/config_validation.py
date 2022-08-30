@@ -1,4 +1,7 @@
-from pogema import GridConfig
+from typing import Union
+
+from pogema import GridConfig, ExtraHard64x64, Hard64x64, Normal64x64, Easy64x64, ExtraHard32x32, Hard32x32, \
+    Normal32x32, Easy32x32, ExtraHard16x16, Hard16x16, Normal16x16, Easy16x16, ExtraHard8x8, Hard8x8, Normal8x8, Easy8x8
 from pydantic import BaseModel
 from typing_extensions import Literal
 
@@ -114,9 +117,12 @@ class AgentPrams(BaseModel):
 
 
 class Environment(BaseModel):
-    name: str = 'Pogema-v0'
-    grid_config: GridConfig = None
-    integration: str = "PyMARL"
+    grid_config: Union[
+        Easy8x8, Normal8x8, Hard8x8, ExtraHard8x8,
+        Easy16x16, Normal16x16, Hard16x16, ExtraHard16x16,
+        Easy32x32, Normal32x32, Hard32x32, ExtraHard32x32,
+        Easy64x64, Normal64x64, Hard64x64, ExtraHard64x64,
+        GridConfig] = GridConfig()
 
 
 class AlgoSettings(BaseModel):

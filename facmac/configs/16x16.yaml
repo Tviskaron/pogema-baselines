@@ -1,5 +1,5 @@
-algo: QMIX
-#  grid_search: [ QMIX, VDN, IQL, ]
+algo: FACMAC
+#  grid_search: [ FACMAC, MADDPG ]
 settings:
   t_max: 2000000
 logging:
@@ -7,5 +7,5 @@ logging:
   project_name: "Pogema-16x16-PyMARL"
 env_args:
   grid_config:
-    map_name: 
+    map_name:
       grid_search: [Easy16x16, Normal16x16, Hard16x16, ExtraHard16x16]

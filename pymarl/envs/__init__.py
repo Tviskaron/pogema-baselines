@@ -1,13 +1,13 @@
 from functools import partial
-import gym
-import pogema
+from pogema import pogema_v0
+
+from utils.config_validation import ExperimentConfig
 
 
-def env_fn(name='Pogema-v0', **kwargs):
-    if 'grid_config' in kwargs and kwargs['grid_config'] is None:
-        del kwargs['grid_config']
-
-    return gym.make(name, **kwargs).unwrapped
+def env_fn(**kwargs):
+    cfg = ExperimentConfig(**kwargs)
+    cfg.env_args.grid_config.integration = 'PyMARL'
+    return pogema_v0(cfg.env_args.grid_config)
 
 
 REGISTRY = {}

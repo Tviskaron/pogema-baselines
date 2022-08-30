@@ -5,4 +5,3 @@ RUN pip install -r /tmp/requirements.txt
 
 
 RUN pip uninstall -y enum34 && pip install --ignore-installed six 
-RUN pip install protobuf==3.20.1

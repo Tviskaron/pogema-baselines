@@ -1,5 +1,10 @@
 import multiprocessing
-from typing import Union, Literal
+from typing import Union 
+
+try:
+    from typing import Literal
+except ImportError:
+    from typing_extensions import Literal
 
 from pogema import GridConfig
 from pydantic import Extra, BaseModel, validator

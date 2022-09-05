@@ -1,7 +1,7 @@
-algo: QMIX
-#  grid_search: [ QMIX, VDN, IQL, ]
+algo: 
+  grid_search: [ QMIX, VDN, IQL, ]
 settings:
-  t_max: 2000000
+  t_max: 4000000
 logging:
   use_wandb: True
   project_name: "Pogema-16x16-PyMARL"

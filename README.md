@@ -3,7 +3,7 @@
 ---
 **Important Note:**
 
-The Baselines repository will not be receiving any future updates. The main baselines have been transferred to the [POGEMA-Benchmark](https://github.com/Cognitive-AI-Systems/pogema-benchmark) repository, which includes more algorithms and tools. 
+**The Baselines repository will not be receiving any future updates.** The main baselines have been transferred to the [POGEMA-Benchmark](https://github.com/Cognitive-AI-Systems/pogema-benchmark) repository, which includes more algorithms and tools. 
 
 ---
 

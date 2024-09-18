@@ -1,5 +1,12 @@
 # Pogema Baselines
 
+---
+**Important Note:**
+
+The Baselines repository will not be receiving any future updates. The main baselines have been transferred to the [POGEMA-Benchmark](https://github.com/Cognitive-AI-Systems/pogema-benchmark) repository, which includes more algorithms and tools. 
+
+---
+
 This repository contains a set of baselines for the [Pogema](https://github.com/AIRI-Institute/pogema) environment.
 
 ## Multi-Agent RL Baselines
